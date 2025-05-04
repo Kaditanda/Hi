@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun, Linda! 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      font-family: 'Segoe Script', cursive;
+      overflow-x: hidden;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 100px auto;
+      background-color: #ffffffcc;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #880e4f;
+      line-height: 1.8;
+    }
+
+    .heart {
+      color: #e91e63;
+      font-size: 30px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .falling-heart {
+      position: fixed;
+      top: -50px;
+      color: #e91e63;
+      font-size: 24px;
+      animation-name: fall;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    video {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💖 Selamat Ulang Tahun, Linda Maulina Putri! 🎂</h1>
+    <p>
+      Sayangku Linda,<br><br>
+      Di hari spesial ini, aku ingin mengucapkan betapa bersyukurnya aku memilikimu dalam hidupku. Kamu adalah cahaya dalam hari-hariku, tawa dalam kesepianku, dan cinta dalam hatiku.<br><br>
+    </p>
+
+    <video autoplay controls playsinline>
+      <source src="202505040118.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+
+    <p>
+      Video ini adalah kenangan indah tentang kita—setiap momen bersamamu adalah hadiah yang tak ternilai.<br><br>
+      Semoga ulang tahunmu dipenuhi dengan kebahagiaan yang berlimpah, cinta yang tulus, dan impian yang menjadi nyata.<br><br>
+      Aku akan selalu ada di sisimu, mencintaimu lebih dari apapun. 💕<br><br>
+      <span class="heart">💖💖💖</span>
+    </p>
+  </div>
+
+  <!-- Efek Hati Jatuh -->
+  <script>
+    const heartCount = 50;
+    for (let i = 0; i < heartCount; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('falling-heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDelay = Math.random() * 10 + "s";
+      heart.innerText = "💗";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
